@@ -5,10 +5,10 @@
     
     <entry>
       <title>Github多账号</title>
-      <link href="/2020/01/13/github-zhang-hao-guan-li/"/>
-      <url>/2020/01/13/github-zhang-hao-guan-li/</url>
+      <link href="/2020/01/13/github-accounts/"/>
+      <url>/2020/01/13/github-accounts/</url>
       
-        <content type="html"><![CDATA[<h1 id="Github-多账号管理"><a href="#Github-多账号管理" class="headerlink" title="Github 多账号管理"></a>Github 多账号管理</h1><p><u>起源于这一天我想开个小号，发现没办法兼容，于是总结一下面向百度配置的经验。</u></p><h2 id="账户配置"><a href="#账户配置" class="headerlink" title="账户配置"></a>账户配置</h2><ol><li><p>生成密钥<br><br> 在git bash中：<code>ssh-keygen -t rsa -C “<a href="mailto:xxxx@github.com" target="_blank" rel="noopener">xxxx@github.com</a>“</code>，生成密钥文件；</p></li><li><p>添加私钥<br><br> <code>ssh-agent bash<br><br> ssh-add id_rsa_xxx</code><br> 注意exit退出ssh bash模式；</p></li><li><p>添加公钥<br><br> 去github的账号setting下的ssh选项中添加公钥内容；</p></li><li><p>添加此账号到config文件<br><br> <code>vi ~/.ssh/config</code></p><p><img src="/images/Github账号管理/1.jpg" alt="1"></p></li></ol><h2 id="测试-连接"><a href="#测试-连接" class="headerlink" title="测试  连接"></a>测试  连接</h2><p><code>ssh -T <a href="mailto:git@xxx.github.com" target="_blank" rel="noopener">git@xxx.github.com</a></code><br>涉及到不同的账号是都要用对应的域名。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Github-多账号管理"><a href="#Github-多账号管理" class="headerlink" title="Github 多账号管理"></a>Github 多账号管理</h1><p><u>起源于这一天我想开个小号，发现没办法兼容，于是总结一下面向百度配置的经验。</u></p><h2 id="账户配置"><a href="#账户配置" class="headerlink" title="账户配置"></a>账户配置</h2><ol><li><p>生成密钥<br><br> 在git bash中：<code>ssh-keygen -t rsa -C “<a href="mailto:xxxx@github.com" target="_blank" rel="noopener">xxxx@github.com</a>“</code>，生成密钥文件；</p></li><li><p>添加私钥<br><br> <code>ssh-agent bash<br><br> ssh-add id_rsa_xxx</code><br> 注意exit退出ssh bash模式；</p></li><li><p>添加公钥<br><br> 去github的账号setting下的ssh选项中添加公钥内容；</p></li><li><p>添加此账号到config文件<br><br> <code>vi ~/.ssh/config</code></p><p><img src="/images/Github_accounts/1.jpg" alt="1"></p></li></ol><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><code>ssh -T <a href="mailto:git@xxx.github.com" target="_blank" rel="noopener">git@xxx.github.com</a></code><br>涉及到不同的账号是都要用对应的域名。</p><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p>转到对应文件夹下输入：</p><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> config user.name <span class="token string">"xxx"</span><span class="token function">git</span> config user.email <span class="token string">"xxx@xxx"</span><span class="token comment" spellcheck="true"># 可以查看结果</span><span class="token function">git</span> config -l</code></pre>]]></content>
       
       
       <categories>
