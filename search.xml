@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Matlab Grammar and Usage</title>
+      <link href="/2020/01/15/matlab/"/>
+      <url>/2020/01/15/matlab/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Matlab的基本用法"><a href="#Matlab的基本用法" class="headerlink" title="Matlab的基本用法"></a>Matlab的基本用法</h1><p><u>从Matlab的官方教程中摘下来的基础用法。</u></p><h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><p>分为菜单、文件区、命令行和工作区，工作区有所有的变量信息；</p><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><table><thead><tr><th>command</th><th>usage</th></tr></thead><tbody><tr><td>doc cmd</td><td>查手册，写在最前面</td></tr><tr><td>clear, clc</td><td>清空变量/清空命令行</td></tr><tr><td>pi, sin, …</td><td>$\pi$, 基本数学函数</td></tr><tr><td>x=[1 2 3; 3 4 5]</td><td>矩阵，空格行内分，分号分列</td></tr><tr><td>x=1:2:10,  linspace(1,10,2)</td><td>从1开始到10间隔为2</td></tr><tr><td>x=(x+1)</td><td>矩阵或向量可与标量计算</td></tr><tr><td>x=x.*x</td><td>对应分量相乘</td></tr><tr><td>x=(x*2)’</td><td>转置</td></tr><tr><td>rand, randn, randi</td><td>随机函数</td></tr><tr><td>zeros, ones</td><td>特殊矩阵生成</td></tr><tr><td>save file x, load file</td><td>保存，加载变量</td></tr><tr><td>x=A(5,7)</td><td>索引，内置end为最后一位，1开头</td></tr><tr><td>x=A(1:3, :)</td><td>冒号可选取范围，也可表示全部</td></tr><tr><td>[val, idx] = max(A)</td><td>多变量赋值用方括号</td></tr><tr><td>size(A), numel(A,cdt)</td><td>尺寸和元素个数(可加条件)</td></tr><tr><td>plot(x,y,’r-.o’)</td><td>画图函数，可加条件，查阅’线条设定’</td></tr><tr><td>loglog,title,legend,xlabel</td><td>望文生义</td></tr><tr><td>hold on/off</td><td>画图时保留上一幅/删除</td></tr><tr><td>&amp;, \</td><td>, 和&amp;&amp;, \</td><td>\</td><td></td><td>貌似可以混用，但是沿袭C的习惯</td></tr><tr><td>A(B &gt; 4)</td><td>逻辑索引，选取A中对应B大于4的位置</td></tr><tr><td>if x&gt;1 cmd end/while/for x=1:3/switch case otherwise/funtion</td><td>决策与循环与函数</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Matlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Matlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Github多账号</title>
       <link href="/2020/01/13/github-accounts/"/>
       <url>/2020/01/13/github-accounts/</url>
