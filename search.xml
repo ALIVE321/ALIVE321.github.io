@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Common Latex Usage</title>
+      <link href="/2020/05/15/frequntly-used-functions/"/>
+      <url>/2020/05/15/frequntly-used-functions/</url>
+      
+        <content type="html"><![CDATA[<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><p>持续更新</p><h2 id="Sigmoid函数"><a href="#Sigmoid函数" class="headerlink" title="Sigmoid函数"></a>Sigmoid函数</h2><p>用于将实数域映射到(0,1)上：<br>$f(x)\ =\ \frac{1}{1+e^{-x}}$</p><h2 id="SoftMax函数"><a href="#SoftMax函数" class="headerlink" title="SoftMax函数"></a>SoftMax函数</h2><p>最大值函数的推广，用于得到每个元素被取到的概率（越大的元素 优先级越高）<br>$\forall x_i\in X,\ f(x_i)=\frac{e^{x_i}}{\sum_i{e^{x_i}}}$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Machine Learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MachineLearning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Matlab Grammar and Usage</title>
       <link href="/2020/01/15/matlab/"/>
       <url>/2020/01/15/matlab/</url>
