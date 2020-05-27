@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title></title>
+      <title>Reading Note 1</title>
       <link href="/2020/05/27/readnote1/"/>
       <url>/2020/05/27/readnote1/</url>
       
-        <content type="html"><![CDATA[<p>title: Reading Note 1<br>date: 2020年5月27日19:17:18<br>author: 李嘉鸿<br>img: /images/readnote1/cover.jpg<br>top: false<br>cover: false<br>coverImg:<br>password:<br>toc: true<br>mathjax: true<br>summary: 周志华——机器学习<br>categories: Python<br>tags:</p><ul><li>Book</li><li>Machine Learning</li></ul><h1 id="读书笔记1"><a href="#读书笔记1" class="headerlink" title="读书笔记1"></a>读书笔记1</h1><p>周志华——机器学习；</p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="读书笔记1"><a href="#读书笔记1" class="headerlink" title="读书笔记1"></a>读书笔记1</h1><p>周志华——机器学习；</p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
       
       
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Book </tag>
+            
+            <tag> Machine Learning </tag>
+            
+        </tags>
       
     </entry>
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://alive321.github.io/"/>
-  <updated>2020-05-27T11:18:30.921Z</updated>
+  <updated>2020-05-27T11:35:43.392Z</updated>
   <id>http://alive321.github.io/</id>
   
   <author>
@@ -17,23 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Reading Note 1</title>
     <link href="http://alive321.github.io/2020/05/27/readnote1/"/>
     <id>http://alive321.github.io/2020/05/27/readnote1/</id>
     <published>2020-05-27T11:12:51.049Z</published>
-    <updated>2020-05-27T11:18:30.921Z</updated>
+    <updated>2020-05-27T11:35:43.392Z</updated>
     
-    <content type="html"><![CDATA[<p>title: Reading Note 1<br>date: 2020年5月27日19:17:18<br>author: 李嘉鸿<br>img: /images/readnote1/cover.jpg<br>top: false<br>cover: false<br>coverImg:<br>password:<br>toc: true<br>mathjax: true<br>summary: 周志华——机器学习<br>categories: Python<br>tags:</p><ul><li>Book</li><li>Machine Learning</li></ul><h1 id="读书笔记1"><a href="#读书笔记1" class="headerlink" title="读书笔记1"></a>读书笔记1</h1><p>周志华——机器学习；</p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="读书笔记1"><a href="#读书笔记1" class="headerlink" title="读书笔记1"></a>读书笔记1</h1><p>周志华——机器学习；</p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;title: Reading Note 1&lt;br&gt;date: 2020年5月27日19:17:18&lt;br&gt;author: 李嘉鸿&lt;br&gt;img: /images/readnote1/cover.jpg&lt;br&gt;top: false&lt;br&gt;cover: false&lt;br&gt;cov
+        &lt;h1 id=&quot;读书笔记1&quot;&gt;&lt;a href=&quot;#读书笔记1&quot; class=&quot;headerlink&quot; title=&quot;读书笔记1&quot;&gt;&lt;/a&gt;读书笔记1&lt;/h1&gt;&lt;p&gt;周志华——机器学习；&lt;/p&gt;
+&lt;h2 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; 
       
     
     </summary>
     
+      <category term="Python" scheme="http://alive321.github.io/categories/Python/"/>
+    
+    
+      <category term="Book" scheme="http://alive321.github.io/tags/Book/"/>
+    
+      <category term="Machine Learning" scheme="http://alive321.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
