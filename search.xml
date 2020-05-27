@@ -210,33 +210,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>Markdown In Typora!!!</title>
-      <link href="/2019/03/20/markdown-in-typora/"/>
-      <url>/2019/03/20/markdown-in-typora/</url>
-      
-        <content type="html"><![CDATA[<h1 id="From-today-on-I-will-begin-using-Markdown"><a href="#From-today-on-I-will-begin-using-Markdown" class="headerlink" title="From today on, I will begin using Markdown."></a>From today on, I will begin using Markdown.</h1><p>It’s already 2019 now. If still using <strong>word</strong> or <strong>notepad</strong> to write articles, maybe I will <del>lose face</del> fall behind.<br>So, it’s time to start using <strong>Mardown</strong>!</p><h2 id="Editor"><a href="#Editor" class="headerlink" title="Editor"></a>Editor</h2><p>There are quite a lot markdown editors online. I prefer the <em>Typora</em>, because:</p><ol><li>Clean appearance.</li><li>Convenient to use.</li><li>Real-time preview.</li><li>Totally free.</li></ol><h5 id="Appearance"><a href="#Appearance" class="headerlink" title="Appearance"></a>Appearance</h5><p><em>Typora</em> has almost no buttons around the working area, making it looks more clean than <em>Word</em> or other text editors.<br><img src="/images/markdown-in-typora_1.jpg" style="zoom:25%"></p><h5 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h5><p><em>Typora</em> provides most of the common commands, and helps the author with some details.<br><img src="/images/markdown-in-typora_2.jpg" style="zoom:50%"></p><h5 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h5><p><em>Typora</em>‘s best feature. Use the <code>win+/</code>(personal setting) shortcut key to switch between the souce code and the preview.<br><img src="/images/markdown-in-typora_3.jpg" style="zoom:30%"><img src="/images/markdown-in-typora_4.jpg" style="zoom:30%"></p><h2 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h2><p>Here I will list the commands in common use.</p><table><thead><tr><th style="text-align:center">Function</th><th style="text-align:left">Command</th></tr></thead><tbody><tr><td style="text-align:center">only 2 levels of titles</td><td style="text-align:left">= title1, - title2</td></tr><tr><td style="text-align:center">at most 6 levels of titles</td><td style="text-align:left"># title1, …, ###### title6</td></tr><tr><td style="text-align:center">reference</td><td style="text-align:left">&gt; reference</td></tr><tr><td style="text-align:center">code blocks</td><td style="text-align:left">use 4 spaces or 1 tab before lines</td></tr><tr><td style="text-align:center">emphasize</td><td style="text-align:left">*text* , _text_ , **text** , __text__</td></tr><tr><td style="text-align:center">split line</td><td style="text-align:left">***, -–, _____, =====</td></tr><tr><td style="text-align:center">link</td><td style="text-align:left">[title](url) , or \&lt;url></td></tr><tr><td style="text-align:center">picture</td><td style="text-align:left">just drag the picture into <em>Typora</em>, or \&lt;img src=” “></td></tr><tr><td style="text-align:center">table</td><td style="text-align:left">table option in <em>Typora</em>, or use text&#124;text to split columns</td></tr></tbody></table><p>As for the size of pictures, I find it difficult when directly draging pictures here.<br>So the better way is adding <code>style=&quot;zoom:40%&quot;</code> at end of  the <code>&lt;img&gt;</code>.(it’s about <em>HTML</em>)</p><p>Other things can be found online.</p><h2 id="This-article-aims-at-learning-Mardown-and-Typora-for-myself"><a href="#This-article-aims-at-learning-Mardown-and-Typora-for-myself" class="headerlink" title="This article aims at learning Mardown and Typora for myself."></a>This article aims at learning Mardown and Typora for myself.</h2><h3 id="Welcome-for-corrections"><a href="#Welcome-for-corrections" class="headerlink" title="Welcome for corrections."></a>Welcome for corrections.</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> Markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Typora </tag>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
