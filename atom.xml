@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://alive321.github.io/"/>
-  <updated>2020-05-15T09:46:50.831Z</updated>
+  <updated>2020-05-27T11:18:30.921Z</updated>
   <id>http://alive321.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://alive321.github.io/2020/05/27/readnote1/"/>
+    <id>http://alive321.github.io/2020/05/27/readnote1/</id>
+    <published>2020-05-27T11:12:51.049Z</published>
+    <updated>2020-05-27T11:18:30.921Z</updated>
+    
+    <content type="html"><![CDATA[<p>title: Reading Note 1<br>date: 2020年5月27日19:17:18<br>author: 李嘉鸿<br>img: /images/readnote1/cover.jpg<br>top: false<br>cover: false<br>coverImg:<br>password:<br>toc: true<br>mathjax: true<br>summary: 周志华——机器学习<br>categories: Python<br>tags:</p><ul><li>Book</li><li>Machine Learning</li></ul><h1 id="读书笔记1"><a href="#读书笔记1" class="headerlink" title="读书笔记1"></a>读书笔记1</h1><p>周志华——机器学习；</p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;title: Reading Note 1&lt;br&gt;date: 2020年5月27日19:17:18&lt;br&gt;author: 李嘉鸿&lt;br&gt;img: /images/readnote1/cover.jpg&lt;br&gt;top: false&lt;br&gt;cover: false&lt;br&gt;cov
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Frequently Used Functions</title>
@@ -213,35 +234,6 @@
       
       
         &lt;h1 id=&quot;From-today-on-I-will-begin-using-Markdown&quot;&gt;&lt;a href=&quot;#From-today-on-I-will-begin-using-Markdown&quot; class=&quot;headerlink&quot; title=&quot;From today
-      
-    
-    </summary>
-    
-      <category term="Markdown" scheme="http://alive321.github.io/categories/Markdown/"/>
-    
-    
-      <category term="Typora" scheme="http://alive321.github.io/tags/Typora/"/>
-    
-      <category term="Markdown" scheme="http://alive321.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World!!!</title>
-    <link href="http://alive321.github.io/2019/03/19/hello-world/"/>
-    <id>http://alive321.github.io/2019/03/19/hello-world/</id>
-    <published>2019-03-19T13:15:00.000Z</published>
-    <updated>2020-01-13T08:51:41.633Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>Welcome to my blog!!!</p><p>This is my very first post!</p><p>To be continued.</p><p>Ljh<br>2019-3-19</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>���²�����ز��������ÿ�ζ����ǣ�<br></p><pre class=" language-bash"><code class="language-bash">hexo cleanhexo g -d</code></pre><p>����ͼƬ�ǵ���/images��Ϊ����·����ͷ��<br></p><p>Ljh<br>2020��1��13��</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;p&gt;Welcome to my blog!!!&lt;/p&gt;
-&lt;p&gt;This is my very first post!&lt;/p&gt;
-&lt;p&gt;To be cont
       
     
     </summary>
