@@ -4,12 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Github多账号, ImagineBreaker">
-    <meta name="description" content="Github 多账号管理起源于这一天我想开个小号，发现没办法兼容，于是总结一下面向百度配置的经验。
-账户配置
-生成密钥 在git bash中：ssh-keygen -t rsa -C “xxxx@github.com“，生成密钥文件；
-
-添">
+    <meta name="keywords" content="Multithread &amp; MultiProcess in Python, ImagineBreaker">
+    <meta name="description" content="Python中的多线程与多进程这几天在实验室处理数据，数据量太大，首先想到多线程，结果效率比单线程还低；后来在学长推荐下看了一下这方面的内容，总算是搞清楚了其中原因，在此记录。多数是事后凭记忆写的，可能有些瑕疵。
+并发与并行之前一直以为这是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Github多账号 | ImagineBreaker</title>
+    <title>Multithread &amp; MultiProcess in Python | ImagineBreaker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +258,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/Github_accounts/logo-git.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/py_multi_thread/cover.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Github多账号
+                        Multithread &amp; MultiProcess in Python
                     </div>
                 </div>
             </div>
@@ -277,10 +274,99 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -289,8 +375,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/" target="_blank">
-                                <span class="chip bg-color">Git</span>
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/Parallel-Computing/" target="_blank">
+                                <span class="chip bg-color">Parallel Computing</span>
                             </a>
                         
                     </div>
@@ -301,8 +391,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Git/" class="post-category" target="_blank">
-                                Git
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                Python
                             </a>
                         
                     </div>
@@ -313,21 +403,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-13
+                    2020-07-20
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        173
+                        665
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -343,25 +433,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Github-多账号管理"><a href="#Github-多账号管理" class="headerlink" title="Github 多账号管理"></a>Github 多账号管理</h1><p><u>起源于这一天我想开个小号，发现没办法兼容，于是总结一下面向百度配置的经验。</u></p>
-<h2 id="账户配置"><a href="#账户配置" class="headerlink" title="账户配置"></a>账户配置</h2><ol>
-<li><p>生成密钥<br><br> 在git bash中：<code>ssh-keygen -t rsa -C “<a href="mailto:xxxx@github.com" target="_blank" rel="noopener">xxxx@github.com</a>“</code>，生成密钥文件；</p>
-</li>
-<li><p>添加私钥<br><br> <code>ssh-agent bash<br><br> ssh-add id_rsa_xxx</code><br> 注意exit退出ssh bash模式；</p>
-</li>
-<li><p>添加公钥<br><br> 去github的账号setting下的ssh选项中添加公钥内容；</p>
-</li>
-<li><p>添加此账号到config文件<br><br> <code>vi ~/.ssh/config</code></p>
-<p><img src="/images/Github_accounts/1.jpg" alt="1"></p>
-</li>
-</ol>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><code>ssh -T <a href="mailto:git@xxx.github.com" target="_blank" rel="noopener">git@xxx.github.com</a></code><br>涉及到不同的账号是都要用对应的域名。</p>
-<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p>转到对应文件夹下输入：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> config user.name <span class="token string">"xxx"</span>
-<span class="token function">git</span> config user.email <span class="token string">"xxx@xxx"</span>
-<span class="token comment" spellcheck="true"># 可以查看结果</span>
-<span class="token function">git</span> config -l
-</code></pre>
+                <h1 id="Python中的多线程与多进程"><a href="#Python中的多线程与多进程" class="headerlink" title="Python中的多线程与多进程"></a>Python中的多线程与多进程</h1><p>这几天在实验室处理数据，数据量太大，首先想到多线程，结果效率比单线程还低；后来在学长推荐下看了一下这方面的内容，总算是搞清楚了其中原因，在此记录。<br><br>多数是事后凭记忆写的，可能有些瑕疵。</p>
+<h2 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h2><p>之前一直以为这是同一个意思，其实差的很远：</p>
+<p>并发：同时段内交替执行多个任务（打游戏时吃饭的状态）<br><br>并行：同时段内同时执行多个任务（看电视时吃饭的状态）</p>
+<p>重要的结论：python只能并发，不能并行。</p>
+<h2 id="线程与进程"><a href="#线程与进程" class="headerlink" title="线程与进程"></a>线程与进程</h2><p>简单说，一个程序至少有一个进程，一个进程至少有一个线程；<br><br>进程由系统分配资源，有单独的唯一进程号和地址空间，线程由CPU调度，同进程内共享进程号和地址空间；</p>
+<p>Python中Threading和MultiProcessing库分别提供了线程和进程操作。</p>
+<h2 id="GIL与互斥锁"><a href="#GIL与互斥锁" class="headerlink" title="GIL与互斥锁"></a>GIL与互斥锁</h2><p>早前刚接触多线程的时候，就知道要用互斥锁来保护变量操作原子性；</p>
+<p>Python内部也有一个锁，Global Interpretation Lock (GIL)；它的功能是每执行1000字节码就自动拿回主线程控制权，这样保证了线程安全，却让Python永远的只能支持单线程并行；GIL主要存在于CPython解释器中，而在JPython中没有，但主流的库都依赖于CPython的C特性以及GIL的线程安全性，所以后续维护中难以去除它。</p>
+<h2 id="IO密集型和CPU密集型"><a href="#IO密集型和CPU密集型" class="headerlink" title="IO密集型和CPU密集型"></a>IO密集型和CPU密集型</h2><p>尽管是fake multithread，仍然有许多实用场景；在一些测试样例中，Python多线程确实也能提高效率；那么能否有效率提升就在于每个任务的操作类型比例：</p>
+<p>IO密集型操作指的是对网络、硬盘等读取写入频繁的操作；CPU密集型操作指的是计算量大、需要CPU持续加载的操作；</p>
+<p>由于Python只能并发特性，对于CPU密集型操作，多线程的提升几乎为0，甚至因为线程切换消耗导致效率降低；但是对于IO密集型操作，通过在IO操作期间插入CPU操作，可以有效利用CPU资源；</p>
+<p>量化来讲，如果CPU操作占比是x，核心数是n，那么应该采用 (n/x) 线程并发，当然Python中核心数与硬件无关，GIL决定了n永远是1；</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在Python中，多线程还是多进程一定要根据操作类型来考虑。</p>
 
             </div>
             <hr>
@@ -509,7 +593,7 @@
                     </span>
                     <a href="http://alive321.github.io" class="b-link-green">ImagineBreaker</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2020/01/13/github-accounts/" class="b-link-green">Github多账号</a>
+                    <a href="/2020/07/20/py-multi-thread/" class="b-link-green">Multithread &amp; MultiProcess in Python</a>
                 </p>
             </div>
         </div>
@@ -791,55 +875,46 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/01/15/matlab/">
+                <a href="/2020/07/20/py-multi-thread/">
                     <div class="card-image">
                         
-                        <img src="/images/Matlab/cover.jpg" class="responsive-img" alt="Matlab Grammar and Usage">
+                        <img src="/images/py_multi_thread/cover.jpg" class="responsive-img" alt="Multithread & MultiProcess in Python">
                         
-                        <span class="card-title">Matlab Grammar and Usage</span>
+                        <span class="card-title">Multithread & MultiProcess in Python</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Matlab的基本用法从Matlab的官方教程中摘下来的基础用法。
-界面分为菜单、文件区、命令行和工作区，工作区有所有的变量信息；
-命令
-
-
-command
-usage
-
-
-
-
-doc cmd
-查手册，写在最前面
-
-
-clear, clc
-</div>
+                    <div class="summary">Python中的多线程与多进程这几天在实验室处理数据，数据量太大，首先想到多线程，结果效率比单线程还低；后来在学长推荐下看了一下这方面的内容，总算是搞清楚了其中原因，在此记录。多数是事后凭记忆写的，可能有些瑕疵。
+并发与并行之前一直以为这是</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Matlab/" class="post-category" target="_blank">
-                                    Matlab
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Matlab/" target="_blank">
-                        <span class="chip bg-color">Matlab</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Parallel-Computing/" target="_blank">
+                        <span class="chip bg-color">Parallel Computing</span>
                     </a>
                     
                 </div>
@@ -853,28 +928,27 @@ clear, clc
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/13/centos/">
+                <a href="/2020/07/11/bin-indexed-tree/">
                     <div class="card-image">
                         
-                        <img src="/images/linux/centos.jpg" class="responsive-img" alt="Linux 实用命令">
+                        <img src="/images/bin_indexed_tree/cover.jpg" class="responsive-img" alt="Binary Indexed Tree (树状数组)">
                         
-                        <span class="card-title">Linux 实用命令</span>
+                        <span class="card-title">Binary Indexed Tree (树状数组)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Linux下常用命令前提  目前使用的是CentOS7，用VMWare做的虚拟机。小部分命令在其他linux系统下不通用。(一般是RedHat的都通用)
-目的  有些命令实在难记，但是每隔一段时间就要重用一次，不想重翻手册，写在这里好了。
-</div>
+                    <div class="summary">树状数组(Binary Indexed Tree)简介中文名和英文名分别对应了形象的和原理的两种理解，树状数组是基于二进制的应用，也是简化版的线段树(为了以数组存储，节约空间)，主要用于处理区间和的问题；
+查询和修改的时间复杂度都是O(lo</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-07-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/Algorithm/" class="post-category" target="_blank">
+                                    Algorithm
                                 </a>
                             
                             
@@ -884,12 +958,8 @@ clear, clc
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Shell/" target="_blank">
-                        <span class="chip bg-color">Shell</span>
-                    </a>
-                    
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Algorithm/" target="_blank">
+                        <span class="chip bg-color">Algorithm</span>
                     </a>
                     
                 </div>
@@ -939,6 +1009,99 @@ clear, clc
     });
 </script>
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>

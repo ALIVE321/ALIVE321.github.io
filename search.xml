@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Multithread &amp; MultiProcess in Python</title>
+      <link href="/2020/07/20/py-multi-thread/"/>
+      <url>/2020/07/20/py-multi-thread/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Python中的多线程与多进程"><a href="#Python中的多线程与多进程" class="headerlink" title="Python中的多线程与多进程"></a>Python中的多线程与多进程</h1><p>这几天在实验室处理数据，数据量太大，首先想到多线程，结果效率比单线程还低；后来在学长推荐下看了一下这方面的内容，总算是搞清楚了其中原因，在此记录。<br><br>多数是事后凭记忆写的，可能有些瑕疵。</p><h2 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h2><p>之前一直以为这是同一个意思，其实差的很远：</p><p>并发：同时段内交替执行多个任务（打游戏时吃饭的状态）<br><br>并行：同时段内同时执行多个任务（看电视时吃饭的状态）</p><p>重要的结论：python只能并发，不能并行。</p><h2 id="线程与进程"><a href="#线程与进程" class="headerlink" title="线程与进程"></a>线程与进程</h2><p>简单说，一个程序至少有一个进程，一个进程至少有一个线程；<br><br>进程由系统分配资源，有单独的唯一进程号和地址空间，线程由CPU调度，同进程内共享进程号和地址空间；</p><p>Python中Threading和MultiProcessing库分别提供了线程和进程操作。</p><h2 id="GIL与互斥锁"><a href="#GIL与互斥锁" class="headerlink" title="GIL与互斥锁"></a>GIL与互斥锁</h2><p>早前刚接触多线程的时候，就知道要用互斥锁来保护变量操作原子性；</p><p>Python内部也有一个锁，Global Interpretation Lock (GIL)；它的功能是每执行1000字节码就自动拿回主线程控制权，这样保证了线程安全，却让Python永远的只能支持单线程并行；GIL主要存在于CPython解释器中，而在JPython中没有，但主流的库都依赖于CPython的C特性以及GIL的线程安全性，所以后续维护中难以去除它。</p><h2 id="IO密集型和CPU密集型"><a href="#IO密集型和CPU密集型" class="headerlink" title="IO密集型和CPU密集型"></a>IO密集型和CPU密集型</h2><p>尽管是fake multithread，仍然有许多实用场景；在一些测试样例中，Python多线程确实也能提高效率；那么能否有效率提升就在于每个任务的操作类型比例：</p><p>IO密集型操作指的是对网络、硬盘等读取写入频繁的操作；CPU密集型操作指的是计算量大、需要CPU持续加载的操作；</p><p>由于Python只能并发特性，对于CPU密集型操作，多线程的提升几乎为0，甚至因为线程切换消耗导致效率降低；但是对于IO密集型操作，通过在IO操作期间插入CPU操作，可以有效利用CPU资源；</p><p>量化来讲，如果CPU操作占比是x，核心数是n，那么应该采用 (n/x) 线程并发，当然Python中核心数与硬件无关，GIL决定了n永远是1；</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在Python中，多线程还是多进程一定要根据操作类型来考虑。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Parallel Computing </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Binary Indexed Tree (树状数组)</title>
       <link href="/2020/07/11/bin-indexed-tree/"/>
       <url>/2020/07/11/bin-indexed-tree/</url>
@@ -174,9 +201,9 @@
       
         <tags>
             
-            <tag> UI </tag>
-            
             <tag> Python </tag>
+            
+            <tag> UI </tag>
             
         </tags>
       
